@@ -36,6 +36,7 @@
             <li class="active"><a href="{{ route('categories.index') }}"><i class="fa fa-list"></i> <span>Kategori</span></a></li>
             <li class="active"><a href="{{ route('products.index') }}"><i class="fa fa-cubes"></i> <span>Product</span></a></li>
             <li class="active"><a href="{{ route('lazadas.index') }}"><i class="fa fa-cubes"></i> <span>Lazada Product</span></a></li>
+            <li class="active"><a href="{{ route('lazadasOrder') }}"><i class="fa fa-cubes"></i> <span>Lazada Orders</span></a></li>
             {{-- <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-users"></i> <span>Customer</span></a></li>
             <li class="active"><a href="{{ route('sales.index') }}"><i class="fa fa-cart-plus"></i> <span>Penjualan</span></a></li>
             <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-truck"></i> <span>Supplier</span></a></li> --}}

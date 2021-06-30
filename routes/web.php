@@ -11,6 +11,7 @@ use App\Http\Controllers\LazopController;
 use App\Http\Controllers\ProductKeluarController;
 use App\Http\Controllers\ProductMasukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
 	return view('auth.login');
@@ -56,6 +57,9 @@ Route::get('dashboard', function () {
 	Route::get('/apiLazadas/detail/{idlazada}', [LazadaProdController::class, 'apiLazadasDetail'])->name('api.lazadas.detail');
 	Route::get('/lazadas/detail/{id}', [LazadaProdController::class, 'detail'])->name('lazadas.detail');
 	Route::post('/lazadas/detail', [LazadaProdController::class, 'saveDetail'])->name('lazadas.detail.saves');
+	
+	Route::get('/lazadasOrder', [OrderController::class, 'index'])->name('lazadasOrder');
+	Route::get('/lazadasOrderDetail/{order_number}/{token}', [OrderController::class, 'detail']);
 
 	Route::get('/lazadas/api/transactions', [LazopController::class, 'get_transaction']);
 	Route::get('/lazadas/api/orders', [LazopController::class, 'get_orders']);

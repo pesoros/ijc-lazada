@@ -249,6 +249,7 @@ class LazopController extends Controller
             
                 for ($i=0; $i < count($data); $i++) { 
                     $data[$i]['nama_akun'] = $value['akun'];
+                    $data[$i]['token'] = $value['token'];
                     array_push($arr,$data[$i]);
                 }
     
@@ -329,10 +330,11 @@ class LazopController extends Controller
             
                 for ($i=0; $i < count($data); $i++) { 
                     $data[$i]['nama_akun'] = $value['akun'];
+                    $data[$i]['token'] = $value['token'];
                     if ($data[$i]['statuses'][0] != 'canceled' && $data[$i]['statuses'][0] != 'pending' && $data[$i]['statuses'][0] != 'unpaid' && $data[$i]['statuses'][0] != 'returned' && $data[$i]['statuses'][0] != 'failed') {
                         $orders = lazadaorders::where('order_number', $data[$i]['order_number'])->first();
                         if ($orders == null) {
-                            $ordersitem = $this->get_orderItem($value['token'],$data[$i]['order_number']);
+                            $ordersitem = $this->get_orderItem($data[$i]['order_number'],$value['token']);
                             foreach ($ordersitem as $key2 => $value2) {
                                 $saveit = false;
                                 $data[$i]['skulist'][$key2] = $value2['shop_sku'];
@@ -356,7 +358,7 @@ class LazopController extends Controller
                             }
                         }
                     }
-                    $data[$i]['items'] = $this->get_orderItem($value['token'],$data[$i]['order_number']);
+                    $data[$i]['items'] = $this->get_orderItem($data[$i]['order_number'],$value['token']);
                     array_push($arr,$data[$i]);
                 }
     
@@ -373,7 +375,7 @@ class LazopController extends Controller
         return $res;
     }
 
-    public function get_orderItem($token, $ordernumber)
+    public function get_orderItem($ordernumber, $token, $url=false)
     {
         $arr = [];
         $method = 'GET';
@@ -384,6 +386,10 @@ class LazopController extends Controller
         $request->addApiParam("order_id", $ordernumber);
         $executelazop = json_decode($c->execute($request, $token), true);
 
-        return $executelazop['data'];
+        if ($url == false) {
+            return $executelazop['data'];
+        } else {
+            return $executelazop;
+        }
     }
 }
