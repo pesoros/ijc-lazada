@@ -2,7 +2,7 @@
 <html lang="en" class="fullscreen-bg">
 
 <head>
-    <title>Login | Klorofil - Free Bootstrap Dashboard Template</title>
+    <title>Login | Pesoros - Free Bootstrap Dashboard Template</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -30,7 +30,7 @@
                     <div class="left">
                         <div class="content">
                             <div class="header">
-                                <div class="logo text-center"><img src="{{asset('assets/img/logo-dark.png')}}" alt="Klorofil Logo"></div>
+                                <div class="logo text-center"><h2>Pesoros.</h2></div>
                                 <p class="lead">Login to your account</p>
                             </div>
                             <form class="form-auth-small" method="POST" action="{{ route('login') }}">
@@ -74,7 +74,7 @@
                         <div class="overlay"></div>
                         <div class="content text">
                             <h1 class="heading">Inventory Stock Management</h1>
-                            <p>by The Develovers</p>
+                            <p>by The Developers</p>
                         </div>
                     </div>
                     <div class="clearfix"></div>

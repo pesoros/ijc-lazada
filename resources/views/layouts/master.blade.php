@@ -122,7 +122,7 @@
         </div>
         <!-- Default to the left -->
         <?php $date = date('Y')?>
-        <strong>Copyright &copy; {{$date}} <a href="#">Revan</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; {{$date}} <a href="https://pesoros.com" target='_blank'>Pesoros.</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
