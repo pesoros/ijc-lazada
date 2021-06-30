@@ -86,8 +86,7 @@
             serverSide: true,
             ajax: "{{ route('api.lazadas.detail', $data->id ) }}",
             columns: [
-                {data: 'id', name: 'id'},
-                {data: 'action', name: 'action', orderable: false, searchable: false}
+                {data: 'id', name: 'id'}
             ]
         });
 

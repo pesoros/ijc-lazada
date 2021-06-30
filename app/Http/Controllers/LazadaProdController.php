@@ -170,12 +170,7 @@ class LazadaProdController extends Controller
     {
         $lazada = LazadaDetail::where('id_lazada', $idlazada);
 
-        return Datatables::of($lazada)
-        ->addColumn('action', function($product){
-            return '<a href="lazadas/detail/'.$product->id.'" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-eye-open"></i> Detail</a> ' .
-                '<a onclick="editForm('. $product->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
-                '<a onclick="deleteData('. $product->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
-        })->make(true);
+        return Datatables::of($lazada)->make(true);
     }
 
     public function saveDetail(Request $request)
