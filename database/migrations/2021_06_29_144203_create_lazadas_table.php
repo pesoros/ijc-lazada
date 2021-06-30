@@ -17,6 +17,7 @@ class CreateLazadasTable extends Migration
             $table->increments('id');
             $table->string('nama');
             $table->string('sku_lazada');
+            $table->string('akun');
             $table->timestamps();
         });
     }

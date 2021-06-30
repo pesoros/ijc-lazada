@@ -132,6 +132,7 @@ class LazopController extends Controller
             
                 for ($i=0; $i < count($data); $i++) { 
                     // if ($data[$i]['fee_name'] != "Payment Fee") {
+                        $setdata[$i]['akun'] = $value['akun'];
                         $setdata[$i]['nama'] = $data[$i]['attributes']['name'];
                         $setdata[$i]['sku_lazada'] = $data[$i]['skus'][0]['ShopSku'];
                         array_push($arr,$setdata[$i]);

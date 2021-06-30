@@ -22,6 +22,7 @@
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Akun</th>
                     <th>Nama</th>
                     <th>SKU Lazada</th>
                     <th></th>
@@ -67,6 +68,7 @@
             ajax: "{{ route('api.lazadas') }}",
             columns: [
                 {data: 'id', name: 'id'},
+                {data: 'akun', name: 'akun'},
                 {data: 'nama', name: 'nama'},
                 {data: 'sku_lazada', name: 'sku_lazada'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
