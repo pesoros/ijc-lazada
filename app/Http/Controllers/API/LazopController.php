@@ -105,7 +105,7 @@ class LazopController extends Controller
         return $executelazop;
     }
 
-    public function get_product()
+    public function get_product($setOffset = '50')
     {
         $tokenwehave = $this->accessToken;
         $arr = [];
@@ -118,7 +118,7 @@ class LazopController extends Controller
             $request->addApiParam('filter','live');
             // $request->addApiParam('update_before','2018-01-01T00:00:00+0800');
             // $request->addApiParam('create_before','2018-01-01T00:00:00+0800');
-            $request->addApiParam('offset','0');
+            $request->addApiParam('offset',$setOffset);
             $request->addApiParam('create_after','2010-01-01T00:00:00+0800');
             // $request->addApiParam('update_after','2010-01-01T00:00:00+0800');
             $request->addApiParam('limit','50');
@@ -138,10 +138,9 @@ class LazopController extends Controller
                         array_push($arr,$setdata[$i]);
                     // }
                 }
-                $res['data'] = $arr;
-            } else {
-                $res = $executelazop;
             }
+            $res['data'] = $arr;
+
         }
         
         return $res;
@@ -247,9 +246,9 @@ class LazopController extends Controller
         return $res;
     }
 
-    public function importProducts()
+    public function importProducts($setOffset = '50')
     {
-        $data = $this->get_product();
+        $data = $this->get_product($setOffset);
         $data = $data['data'];
         // for ($i=0; $i < count($data); $i++) { 
             Lazada::insert($data);

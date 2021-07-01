@@ -21,7 +21,7 @@ Route::get('products', [LazopController::class, 'get_product']);
 Route::get('transactions', [LazopController::class, 'get_transaction']);
 Route::get('orders', [LazopController::class, 'get_orders']);
 Route::get('orderDetail/{order_number}/{token}/{url}', [LazopController::class, 'get_orderItem']);
-Route::get('importdata', [LazopController::class, 'importProducts']);
+Route::get('importdata/{limit}', [LazopController::class, 'importProducts']);
 Route::get('local-products', [LazopController::class, 'get_product_locally']);
 Route::get('orders/crawl', [LazopController::class, 'crawl_orders']);
 
