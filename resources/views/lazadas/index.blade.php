@@ -21,6 +21,7 @@
             <table id="lazadas-table" class="table table-striped">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Akun</th>
                     <th>Nama</th>
                     <th>SKU Lazada</th>
@@ -78,6 +79,7 @@
             'info': true,
             ajax: "{{ route('api.lazadas') }}",
             columns: [
+                {data: 'id', name: 'id'},
                 {data: 'akun', name: 'akun'},
                 {data: 'nama', name: 'nama'},
                 {data: 'sku_lazada', name: 'sku_lazada'},
