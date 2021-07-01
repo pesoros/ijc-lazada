@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-sm-4">
                     <input type="text" name="id_lazada" id="id_lazada" value="{{ $data->id }}" style="display: none">
-                    {!! Form::select('id_product', $product, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Category --', 'id_product' => 'id', 'required']) !!}
+                    {!! Form::select('id_product', $product, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id_product' => 'id', 'required']) !!}
                     <span class="help-block with-errors"></span>
                 </div>
                 <div class="col-sm-2">

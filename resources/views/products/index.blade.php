@@ -26,6 +26,7 @@
                     <th>Harga</th>
                     <th>QTY</th>
                     <th>Category</th>
+                    <th>SKU</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -73,6 +74,7 @@
                 {data: 'harga', name: 'harga'},
                 {data: 'qty', name: 'qty'},
                 {data: 'category_name', name: 'category_name'},
+                {data: 'sku_offline', name: 'sku_offline'},
                 {data: 'action', name: 'action', orderable: false, searchable: false}
             ]
         });

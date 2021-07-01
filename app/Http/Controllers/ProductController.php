@@ -55,6 +55,7 @@ class ProductController extends Controller
             'harga'         => 'required',
             'qty'           => 'required',
             'category_id'   => 'required',
+            'sku_offline'   => 'required',
         ]);
 
         $input = $request->all();
@@ -114,6 +115,7 @@ class ProductController extends Controller
             'qty'           => 'required',
 //            'image'         => 'required',
             'category_id'   => 'required',
+            'sku_offline'   => 'required',
         ]);
 
         $input = $request->all();

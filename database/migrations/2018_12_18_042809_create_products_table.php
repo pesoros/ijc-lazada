@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('harga');
             $table->string('image')->default(null);
             $table->integer('qty');
+            $table->string('sku_offline');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
