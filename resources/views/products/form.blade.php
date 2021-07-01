@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label >SKU</label>
+                            <label >Product ID</label>
                             <input type="text" class="form-control" id="sku_offline" name="sku_offline"  autofocus required>
                             <span class="help-block with-errors"></span>
                         </div>
